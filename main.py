@@ -33,7 +33,10 @@ getheadlines='{"sid":"'+sid+'","op":"getHeadlines","feed_id":"'+str(feedid)+'"}'
 headlinesresp=requests.post(url,data=getheadlines)
 headlines=json.loads(headlinesresp.content.decode('utf-8'))
 
-for artnr,article in enumerate(headlines['content']):
+artnr=0
+for article in headlines['content']:
+    if article['unread']:
+        print(article['title'])
+        artnr+=1
     if artnr >= min(maxarticles,int(unreadcount)):
         break
-    print(article['title'])
