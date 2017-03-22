@@ -1,6 +1,6 @@
 # Python script to read tt-rss api and conky config to display
 
-A simple python script that can be called from the commandline that displays article tiles.
+A simple python script that can be called from the commandline that displays article tiles for Tiny Tiny RSS.
 You'll need to edit the variables for username, password and server (obviously) in the python script.
 
 To call the script run:  
